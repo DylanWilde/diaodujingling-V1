@@ -1076,7 +1076,6 @@ function enterViewerMode(sharedData) {
 
   document.getElementById('tbAdmin2').style.display = 'none';
   document.getElementById('tbAdmin3').style.display = 'none';
-  document.getElementById('loginArea').style.display = 'none';
 
   var latest = fillSharedDateSelect(sharedData, 'dDate');
   fillSharedDateSelect(sharedData, 'dDate3');
