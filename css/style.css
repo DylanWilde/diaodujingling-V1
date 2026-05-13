@@ -1,0 +1,116 @@
+/* ═══════════════════════════════════════════════════
+   调度精灵 DispatchHub V5 — 样式表
+   ═══════════════════════════════════════════════════ */
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#F8FAFC;font-family:'Segoe UI','Microsoft YaHei',sans-serif;color:#0F172A;font-size:14px;padding:20px 16px;min-height:100vh}
+.container{max-width:1440px;margin:0 auto}
+.hd{background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:16px 24px;margin-bottom:16px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.hd h1{font-size:1.4rem;font-weight:800}.hd .v{background:#DBEAFE;color:#2563EB;padding:2px 10px;border-radius:10px;font-size:.7rem;font-weight:700}.hd .sub{color:#64748B;font-size:.75rem;margin-left:6px}.hd .by{color:#94A3B8;font-size:.75rem}.hd .st{font-size:.75rem;color:#16A34A}
+
+.tb{display:flex;gap:2px;flex-wrap:wrap}
+.tb-btn{background:transparent;border:none;padding:10px 20px;cursor:pointer;font-size:.85rem;font-weight:600;color:#475569;border-bottom:3px solid transparent;transition:.15s;border-radius:8px 8px 0 0}
+.tb-btn:hover{color:#0F172A;background:#F1F5F9}.tb-btn.on{color:#2563EB;border-bottom-color:#2563EB}
+.tc{display:none;padding-top:16px}.tc.on{display:block}
+
+.cd{background:#fff;border:1px solid #E2E8F0;border-radius:14px;padding:18px 22px;margin-bottom:14px}
+.cd h2{font-size:1rem;font-weight:700;margin-bottom:12px}
+
+.r{display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;margin-bottom:8px}
+.c{flex:1;min-width:140px}.c2{flex:2;min-width:180px}
+
+input,select,textarea{width:100%;padding:8px 12px;border:1px solid #E2E8F0;border-radius:8px;font-size:13px;background:#F1F5F9;color:#0F172A;font-family:inherit;transition:.15s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:#2563EB;background:#fff}
+textarea{resize:vertical;min-height:60px}
+label{display:block;font-size:.7rem;font-weight:600;color:#475569;margin-bottom:3px}
+
+.btn{display:inline-flex;align-items:center;gap:4px;padding:8px 16px;border:none;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;transition:.15s;white-space:nowrap}
+.btn-p{background:#2563EB;color:#fff}.btn-p:hover{background:#1D4ED8}
+.btn-s{background:#F1F5F9;color:#0F172A;border:1px solid #E2E8F0}.btn-s:hover{background:#E2E8F0}
+.btn-g{background:transparent;color:#2563EB;font-weight:600;padding:5px 10px}.btn-g:hover{background:#DBEAFE}.btn-sm{padding:5px 12px;font-size:11px}
+
+.uz{border:2px dashed #E2E8F0;border-radius:12px;padding:24px;text-align:center;cursor:pointer;transition:.15s;background:#F1F5F9}
+.uz:hover{border-color:#2563EB;background:#fff}
+.uz input[type=file]{display:none}
+
+.st{font-size:.8rem;padding:4px 0}.st-ok{color:#16A34A}.st-err{color:#DC2626}.st-info{color:#475569}
+.st-big{font-size:1.5rem;font-weight:800;padding:40px 0;text-align:center;color:#94A3B8}
+
+.tw{overflow-x:auto;margin-top:8px;border-radius:10px;border:1px solid #E2E8F0}
+table{width:100%;border-collapse:collapse;font-size:12px;background:#fff}
+th{background:#F8FAFC;padding:8px;font-weight:700;color:#475569;text-align:left;border-bottom:2px solid #E2E8F0}
+td{padding:7px;border-bottom:1px solid #E2E8F0}
+tr:hover td{background:#F1F5F9}
+.tg{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:600}
+.tg-ok{background:#DCFCE7;color:#16A34A}.tg-err{background:#FEE2E2;color:#DC2626}
+.tg-warn{background:#FEF3C7;color:#D97706}.tg-info{background:#DBEAFE;color:#2563EB}
+
+/* Stats */
+.sb{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.sb-item{background:#fff;border:1px solid #E2E8F0;border-radius:10px;padding:12px 20px;flex:1;min-width:110px;text-align:center}
+.sb-item .n{font-size:1.5rem;font-weight:800}.sb-item .l{font-size:.7rem;color:#64748B;margin-top:2px}
+.sb-blue .n{color:#2563EB}.sb-gray .n{color:#475569}.sb-amber .n{color:#D97706}.sb-green .n{color:#16A34A}
+
+/* Terminal columns */
+.tc-grid{display:flex;gap:14px;overflow-x:auto;padding-bottom:8px;align-items:flex-start;min-height:200px}
+.tc-col{min-width:240px;max-width:320px;flex:1;background:#fff;border:1px solid #E2E8F0;border-radius:12px;padding:12px 14px}
+.tc-col h3{font-size:.85rem;font-weight:700;color:#2563EB;padding-bottom:8px;margin-bottom:10px;border-bottom:2px solid #E2E8F0;display:flex;justify-content:space-between;align-items:center}
+.tc-col h3 span{font-size:.7rem;font-weight:400;color:#64748B;background:#F1F5F9;padding:2px 8px;border-radius:10px}
+
+/* Ship card */
+.sc{background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:10px 12px;margin-bottom:8px;transition:.15s}
+.sc:hover{border-color:#2563EB}
+.sc .sn{font-size:13px;font-weight:700;color:#0F172A;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:4px}
+.sc .sn .tags{display:flex;gap:4px}
+.sc .tags .tag{display:inline-block;padding:1px 8px;border-radius:10px;font-size:10px;font-weight:600}
+.sc .tag-arr{background:#E0F2FE;color:#0284C7}.sc .tag-dep{background:#FCE7F3;color:#DB2777}
+.sc .en-row{display:flex;gap:4px;margin-top:6px;align-items:center}
+.sc .en-row input{font-size:11px;padding:4px 8px;background:#fff;width:100%}
+.sc .en-row a{font-size:11px;color:#2563EB;text-decoration:none;font-weight:600;white-space:nowrap;cursor:pointer}
+.sc .en-row a:hover{text-decoration:underline}
+.sc .info{font-size:11px;color:#64748B;margin-top:4px;line-height:1.5}
+.sc .info b{color:#0F172A}
+
+/* ETA预警颜色 */
+.sc-eta-ok{border-left:4px solid #16A34A}
+.sc-eta-warn{background:#FFF7ED;border:1px solid #F97316;border-left:4px solid #F97316}
+.sc-eta-warn:hover{border-color:#EA580C}
+.sc-eta-danger{background:#FEF2F2;border:1px solid #DC2626;border-left:4px solid #DC2626}
+.sc-eta-danger:hover{border-color:#B91C1C}
+.sc .eta-tag{display:inline-block;padding:1px 8px;border-radius:10px;font-size:10px;font-weight:700}
+.sc .eta-orange{background:#FED7AA;color:#C2410C}
+.sc .eta-red{background:#FECACA;color:#B91C1C}
+.sc .eta-ok{background:#DCFCE7;color:#15803D}
+
+/* Declaration status in cards */
+.sc .decl-status{margin-top:4px;font-size:10px;display:flex;gap:8px;flex-wrap:wrap}
+.sc .decl-status .item{display:flex;align-items:center;gap:3px}
+.sc .decl-status .done{color:#16A34A;font-weight:600}
+.sc .decl-status .pending{color:#D97706;font-weight:600}
+
+/* 7日海事弹窗 */
+.decl-modal .modal{max-width:480px}
+.decl-section{background:#F8FAFC;border:1px solid #E2E8F0;border-radius:10px;padding:14px;margin-bottom:12px}
+.decl-section h4{font-size:13px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.decl-section .check-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.decl-section .check-row input[type=checkbox]{width:18px;height:18px;cursor:pointer;accent-color:#2563EB}
+.decl-section .check-row label{font-size:13px;font-weight:600;cursor:pointer;margin:0;display:inline}
+.decl-section .status-badge{font-size:11px;padding:2px 10px;border-radius:20px;font-weight:600}
+.decl-section .badge-done{background:#DCFCE7;color:#16A34A}
+.decl-section .badge-pending{background:#FEF3C7;color:#D97706}
+.decl-section textarea{font-size:12px;min-height:50px;margin-top:4px}
+
+/* 船讯网弹窗 */
+.modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:9999;display:none;justify-content:center;align-items:center;padding:20px}
+.modal-overlay.on{display:flex}
+.modal{background:#fff;border-radius:16px;width:100%;max-width:520px;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.25);animation:modalIn .25s ease}
+@keyframes modalIn{from{transform:scale(.95)translateY(10px);opacity:0}to{transform:scale(1)translateY(0);opacity:1}}
+.modal-hd{position:sticky;top:0;z-index:1;background:#fff;border-bottom:1px solid #E2E8F0;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
+.modal-hd h3{font-size:1rem;font-weight:700}
+.modal-close{width:32px;height:32px;border:none;background:#F1F5F9;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;color:#64748B;transition:.15s}
+.modal-close:hover{background:#E2E8F0;color:#0F172A}
+.modal-body{padding:20px}
+.modal-body.loading{text-align:center;padding:40px 20px;color:#64748B}
+.modal-body.error{text-align:center;padding:40px 20px;color:#DC2626}
+.modal-ft{border-top:1px solid #E2E8F0;padding:12px 20px;display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}
+.modal-ft .btn{text-decoration:none}
