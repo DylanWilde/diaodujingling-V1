@@ -12,7 +12,12 @@
 
 <div class="hd">
   <div><h1>⚓ 调度精灵 <span class="v">V5</span><span class="sub">/ DispatchHub</span></h1></div>
-  <div><span class="st" id="dbStatus">💾 初始化...</span> <span class="by">Tato.Lee</span> <span id="adminArea" style="display:none;margin-left:10px"><button class="btn btn-sm btn-p" onclick="publishData()" style="font-size:11px;padding:3px 10px">📤 发布到线上</button></span></div>
+  <div style="display:flex;gap:8px;align-items:center">
+    <span class="st" id="dbStatus">💾 初始化...</span>
+    <span class="by">Tato.Lee</span>
+    <span id="adminArea" style="display:none"><button class="btn btn-sm btn-p" onclick="publishData()">📤 发布到线上</button></span>
+    <span id="loginArea"><button class="btn btn-p" onclick="adminLogin()" id="loginBtn">🔑 管理员登录</button></span>
+  </div>
 </div>
 
 <div class="tb">
@@ -20,9 +25,6 @@
   <button class="tb-btn" onclick="sw(1)">📋 申报确认看板</button>
   <button class="tb-btn" onclick="sw(2)" id="tbAdmin2">📡 引航站转换器</button>
   <button class="tb-btn" onclick="sw(3)" id="tbAdmin3">🚢 船舶数据管理</button>
-  <span style="margin-left:auto;display:flex;gap:4px;align-items:center" id="loginArea">
-    <button class="btn btn-sm btn-s" onclick="adminLogin()" id="loginBtn" style="font-size:11px">🔑 管理员登录</button>
-  </span>
 </div>
 
 <!-- TAB 0: 看板 -->

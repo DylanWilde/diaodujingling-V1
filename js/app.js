@@ -1284,13 +1284,17 @@ function closeModal(){ document.getElementById('shipModal').classList.remove('on
   var sharedData = await tryLoadSharedData();
   var hasToken = !!localStorage.getItem('gh_token_enc');
 
-  if (sharedData && !hasToken) {
-    enterViewerMode(sharedData);
-    return;
-  }
-
+  /* 有token自动进入管理员模式 */
   if (hasToken) {
     enableAdminMode();
+  }
+
+  /* 有共享数据则预加载（但不锁定UI） */
+  if (sharedData) {
+    sharedShips = sharedData;
+    fillSharedDateSelect(sharedData, 'dDate');
+    fillSharedDateSelect(sharedData, 'dDate3');
+    document.getElementById('dbStatus').textContent = '👀 在线数据 · 共 ' + sharedData.length + ' 条';
   }
 
   var today = new Date().toISOString().split('T')[0];
