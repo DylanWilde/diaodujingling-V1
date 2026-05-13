@@ -1253,7 +1253,8 @@ function getETAHours(etaStr) {
     if ((etaDateD - now) < -30*24*60*60*1000) {
       etaDateD = new Date(y, mNow + 1, dayD, hourD, minD);
     }
-    return Math.max(0, (etaDateD - now) / (1000 * 60 * 60));
+    var diffH = (etaDateD - now) / (1000 * 60 * 60);
+    return diffH < 0 ? -1 : diffH;
   }
   // 尝试格式 "DD/" 仅日期无时间（如 "17/"），默认当天23:59
   var mDD2 = etaStrClean.match(/^(\d{1,2})\/?$/);
@@ -1303,6 +1304,7 @@ function getETAHours(etaStr) {
 function getETAAlertLevel(etaStr) {
   var hours = getETAHours(etaStr);
   if (hours === Infinity) return '';
+  if (hours < 0) return 'expired';  // 已过期
   if (hours <= 24) return 'danger';
   if (hours <= 48) return 'warn';
   return 'ok';
@@ -1381,11 +1383,13 @@ function rd3() {
       if (alert === 'danger') etaTag = '<span class="eta-tag eta-red">🔴 <24h</span>';
       else if (alert === 'warn') etaTag = '<span class="eta-tag eta-orange">🟠 <48h</span>';
       else if (alert === 'ok') etaTag = '<span class="eta-tag eta-ok">🟢 >48h</span>';
+      else if (alert === 'expired') etaTag = '<span class="eta-tag" style="background:#E5E7EB;color:#6B7280">⚫ 已过</span>';
 
       // 卡片样式
       var cardClass = 'sc';
       if (alert === 'danger') cardClass += ' sc-eta-danger';
       else if (alert === 'warn') cardClass += ' sc-eta-warn';
+      else if (alert === 'ok') cardClass += ' sc-eta-ok';
       else cardClass += ' sc-eta-ok';
 
       // 申报状态
@@ -1431,6 +1435,7 @@ function openDeclModal(name, iv, ev) {
   var alertHTML = '';
   if (alertLevel === 'danger') alertHTML = '<span class="eta-tag eta-red" style="display:inline-block;margin-top:4px">🔴 ETA <24小时，请优先处理</span>';
   else if (alertLevel === 'warn') alertHTML = '<span class="eta-tag eta-orange" style="display:inline-block;margin-top:4px">🟠 ETA <48小时，请尽快处理</span>';
+  else if (alertLevel === 'expired') alertHTML = '<span class="eta-tag" style="display:inline-block;margin-top:4px;background:#E5E7EB;color:#6B7280">⚫ ETA已过期</span>';
 
   var body = document.getElementById('declModalBody');
   body.innerHTML = ''
